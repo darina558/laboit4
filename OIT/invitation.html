@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation &mdash; Flower keen Workshop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root { --pink: #e91e63; --pink-dark: #c2185b; --blush: #fdf0f4; --border: #f1cfd7; --text: #1f1f1f; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            min-height: 100vh; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;
+            padding: 2rem 1rem; background: var(--blush); color: var(--text); font-family: 'Inter', system-ui, sans-serif;
+        }
+        h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
+        .hint { color: #666; text-align: center; }
+
+        .envelope { position: relative; width: min(92vw, 460px); aspect-ratio: 3 / 2; margin-top: 150px; cursor: pointer; }
+        .envelope .back { position: absolute; inset: 0; background: #f3b8c8; border-radius: 6px; }
+        .envelope .paper {
+            position: absolute; left: 6%; right: 6%; bottom: 8%; height: 85%; padding: 1rem;
+            background: #fff; border-radius: 4px; text-align: center;
+            display: grid; place-items: center; font-family: 'Playfair Display', serif; color: var(--pink);
+            transition: transform .8s ease .3s;
+        }
+        .envelope .front {
+            position: absolute; inset: 0; z-index: 2; border-radius: 6px;
+            background:
+                linear-gradient(to top right, transparent 49.5%, #f7cfdb 50%) left / 50% 100% no-repeat,
+                linear-gradient(to top left, transparent 49.5%, #f9dbe5 50%) right / 50% 100% no-repeat;
+        }
+        .envelope .front::after {
+            content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 55%;
+            background: linear-gradient(to top, #f5c1d0 , #f5c1d0); clip-path: polygon(0 100%, 50% 0, 100% 100%);
+            border-radius: 0 0 6px 6px;
+        }
+        .envelope .flap {
+            position: absolute; top: 0; left: 0; right: 0; height: 55%; z-index: 3;
+            background: #ee9bb3; clip-path: polygon(0 0, 100% 0, 50% 100%);
+            transform-origin: top; transition: transform .6s ease, z-index 0s .3s;
+        }
+        .seal {
+            position: absolute; z-index: 4; left: 50%; top: 45%; transform: translate(-50%, -50%);
+            display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 50%;
+            background: var(--pink); color: #fff; font-size: 1.4rem; box-shadow: 0 3px 8px rgba(0,0,0,.25);
+            transition: opacity .3s;
+        }
+        .envelope.open .flap { transform: rotateX(180deg); z-index: 1; }
+        .envelope.open .seal { opacity: 0; }
+        .envelope.open .paper { transform: translateY(-85%); z-index: 1; }
+
+        .invitation {
+            width: min(94vw, 560px); padding: 2.5rem 2rem; text-align: center; background: #fff;
+            border: 2px solid var(--pink); outline: 6px solid #fff; box-shadow: 0 0 0 8px var(--border), 0 12px 30px rgba(0,0,0,.1);
+            border-radius: 6px; animation: fadeUp .8s ease both;
+        }
+        .invitation[hidden] { display: none; }
+        .invitation .eyebrow { color: var(--pink); letter-spacing: .25em; text-transform: uppercase; font-size: .8rem; font-weight: 600; }
+        .invitation h2 { margin: .6rem 0; font-size: 2.2rem; line-height: 1.2; }
+        .invitation .lead { font-style: italic; color: #666; margin-bottom: 1.5rem; }
+        .details { list-style: none; margin: 1.5rem 0; padding: 1.2rem 0; border-top: 1px dashed var(--border); border-bottom: 1px dashed var(--border); }
+        .details li { margin: .4rem 0; }
+        .details strong { color: var(--pink-dark); }
+        .rsvp { font-size: .9rem; color: #666; }
+
+        .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+        .btn {
+            padding: .85rem 1.8rem; border: 1px solid var(--pink); border-radius: 4px; background: var(--pink); color: #fff;
+            font: 600 1rem 'Inter', sans-serif; text-decoration: none; cursor: pointer; transition: background-color .3s, transform .3s;
+        }
+        .btn:hover { background: var(--pink-dark); transform: translateY(-2px); }
+        .btn.outline { background: transparent; color: var(--pink); }
+        .btn.outline:hover { background: var(--pink); color: #fff; }
+
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+        @media (max-width: 480px) { .invitation { padding: 2rem 1.2rem; } .invitation h2 { font-size: 1.7rem; } }
+
+        @page { size: A5; margin: 10mm; }
+        @media print {
+            body { background: #fff; padding: 0; min-height: 0; }
+            .envelope, .hint, .actions { display: none !important; }
+            .invitation, .invitation[hidden] { display: block !important; width: 100%; box-shadow: none; outline: none; animation: none; }
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <p class="hint" id="hint">Click the envelope to open your invitation ✉️</p>
+
+    <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open the invitation">
+        <div class="back"></div>
+        <div class="paper">You are invited 🌸</div>
+        <div class="front"></div>
+        <div class="flap"></div>
+        <div class="seal">🌸</div>
+    </div>
+
+    <article class="invitation" id="card" hidden>
+        <p class="eyebrow">You are invited</p>
+        <h2>Autumn Bouquet Masterclass</h2>
+        <p class="lead">An evening of flowers, tea and creativity with the Flower keen florists.</p>
+        <ul class="details">
+            <li>📅 <strong>Date:</strong> 12 December 2026</li>
+            <li>🕕 <strong>Time:</strong> 18:00 – 20:30</li>
+            <li>📍 <strong>Place:</strong> Flower keen Studio, Kvitkova St. 12, Chernivtsi</li>
+            <li>💐 <strong>Includes:</strong> all flowers, tools and a bouquet to take home</li>
+        </ul>
+        <p class="rsvp">Please confirm your attendance by 5 December:<br>+38 (050) 123-45-67 · hello@flowerkeen.com</p>
+    </article>
+
+    <div class="actions">
+        <button type="button" class="btn" id="printBtn" disabled>🖨 Print invitation</button>
+        <a class="btn outline" href="index.html">Back to shop</a>
+    </div>
+
+    <script>
+        const env = document.getElementById('envelope'), card = document.getElementById('card'),
+              printBtn = document.getElementById('printBtn'), hint = document.getElementById('hint');
+        function openEnvelope() {
+            env.classList.add('open');
+            hint.hidden = true;
+            setTimeout(() => { card.hidden = false; env.style.display = 'none'; printBtn.disabled = false; }, 1300);
+        }
+        env.addEventListener('click', openEnvelope);
+        env.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openEnvelope(); } });
+        printBtn.addEventListener('click', () => window.print());
+    </script>
+</body>
+</html>

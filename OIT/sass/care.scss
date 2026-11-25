@@ -1,0 +1,144 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: $font-body;
+  color: $text;
+  line-height: 1.6;
+
+  h1, h2, h3 { font-family: $font-heading; line-height: 1.25; }
+  p { color: $muted; }
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 8%;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+
+  .brand {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $pink;
+    text-decoration: none;
+  }
+
+  a.back {
+    color: $text;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover { color: $pink; }
+  }
+}
+
+.hero {
+  padding: 4rem 8%;
+  text-align: center;
+  background: $bg-pink;
+
+  h1 { font-size: 2.6rem; margin-bottom: 0.75rem; }
+  p  { max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
+
+  @include respond(md) {
+    padding: 2.5rem 5%;
+    h1 { font-size: 1.9rem; }
+  }
+}
+
+.section {
+  padding: 4rem 8%;
+
+  > h2 { margin-bottom: 2rem; text-align: center; }
+
+  @include respond(md) { padding: 2.5rem 5%; }
+}
+
+.tips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @include respond(lg) { grid-template-columns: repeat(2, 1fr); }
+  @include respond(md) { grid-template-columns: 1fr; }
+}
+
+.tip {
+  @include card;
+
+  .num {
+    display: grid;
+    place-items: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: $pink;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  h3 { margin-bottom: 0.5rem; font-size: 1.2rem; }
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid $border;
+  border-radius: $radius;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td { padding: 0.9rem 1.2rem; text-align: left; }
+  th { background: $bg-pink; font-family: $font-heading; }
+  tr + tr td { border-top: 1px solid $border; }
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $text;
+
+  @each $name, $color in $tags {
+    &--#{$name} { background: $color; }
+  }
+}
+
+.cta {
+  padding: 3rem 8%;
+  text-align: center;
+  background: $bg-pink;
+
+  a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.85rem 2rem;
+    border-radius: 4px;
+    background: $pink;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover { background: $pink-dark; transform: translateY(-2px); }
+  }
+}
+
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  background: #111;
+  color: #888;
+  font-size: 0.9rem;
+}

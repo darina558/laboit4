@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Delivery &amp; FAQ &mdash; Flower keen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bs-primary: #e91e63;
+            --bs-primary-rgb: 233, 30, 99;
+            --bs-link-color: #e91e63;
+            --bs-link-hover-color: #c2185b;
+            --bs-body-font-family: 'Inter', system-ui, sans-serif;
+        }
+        h1, h2, h3, h4, .navbar-brand { font-family: 'Playfair Display', Georgia, serif; }
+        .navbar-brand { color: #e91e63 !important; font-weight: 700; font-size: 1.5rem; }
+        .btn-primary { --bs-btn-bg: #e91e63; --bs-btn-border-color: #e91e63; --bs-btn-hover-bg: #c2185b; --bs-btn-hover-border-color: #c2185b; --bs-btn-active-bg: #c2185b; }
+        .btn-outline-primary { --bs-btn-color: #e91e63; --bs-btn-border-color: #e91e63; --bs-btn-hover-bg: #e91e63; --bs-btn-hover-border-color: #e91e63; }
+        .bg-blush { background: #fdf0f4; }
+        .hero-img { max-height: 460px; object-fit: cover; }
+        .card { border-color: #f1cfd7; transition: transform .3s ease, box-shadow .3s ease; }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 12px 25px rgba(0, 0, 0, .08); }
+        .accordion-button:not(.collapsed) { background: #fdf0f4; color: #c2185b; }
+        .accordion-button:focus, .form-control:focus { border-color: #e91e63; box-shadow: 0 0 0 .25rem rgba(233, 30, 99, .15); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Flower keen</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase small fw-medium">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#catalog">Catalog</a></li>
+                <li class="nav-item"><a class="nav-link" href="care.html">Flower Care</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="delivery.html">Delivery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ask">Ask us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="bg-blush py-5">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold">Delivery that arrives as fresh as the flowers</h1>
+                <p class="lead text-secondary">We deliver across Chernivtsi every day. Choose the speed that suits your moment.</p>
+                <a href="#options" class="btn btn-primary btn-lg">See options</a>
+                <a href="index.html#catalog" class="btn btn-outline-primary btn-lg ms-2">Browse bouquets</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="image/v.jpg" class="img-fluid rounded-4 shadow hero-img w-100" alt="Pastel bouquet ready for delivery">
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section id="options" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Delivery Options</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 text-center p-3">
+                        <div class="card-body">
+                            <div class="fs-1">🚴</div>
+                            <h3 class="h4 card-title">Express</h3>
+                            <p class="card-text text-secondary">Within 2 hours. Perfect for surprises and last-minute gifts.</p>
+                            <p class="fs-4 fw-bold text-primary mb-0">$5.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center p-3">
+                        <div class="card-body">
+                            <div class="fs-1">🚚</div>
+                            <h3 class="h4 card-title">Standard</h3>
+                            <p class="card-text text-secondary">Choose a delivery window on the day you prefer.</p>
+                            <p class="fs-4 fw-bold text-primary mb-0">$3.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 text-center p-3">
+                        <div class="card-body">
+                            <div class="fs-1">🌸</div>
+                            <h3 class="h4 card-title">Studio pickup</h3>
+                            <p class="card-text text-secondary">Pick up your bouquet at our studio — ready in 30 minutes.</p>
+                            <p class="fs-4 fw-bold text-primary mb-0">Free</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-blush">
+        <div class="container">
+            <h2 class="text-center mb-4">Delivery Zones</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle bg-white">
+                    <thead>
+                        <tr><th scope="col">Zone</th><th scope="col">Time</th><th scope="col">Free from</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>City centre</td><td>1–2 hours</td><td>$50</td></tr>
+                        <tr><td>Residential districts</td><td>2–3 hours</td><td>$60</td></tr>
+                        <tr><td>Suburbs (up to 15 km)</td><td>Same day</td><td>$80</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <div class="accordion" id="faq">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">Can I choose the delivery time?</button>
+                    </h3>
+                    <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                        <div class="accordion-body">Yes. With Standard delivery you pick a 2-hour window; Express arrives within two hours of confirmation.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">What if the recipient is not at home?</button>
+                    </h3>
+                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                        <div class="accordion-body">Our courier calls first. If nobody answers, we can leave the bouquet with a neighbour or reschedule for free.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">Can you add a card with a message?</button>
+                    </h3>
+                    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                        <div class="accordion-body">Of course! Write your text in the order notes and our florist will handwrite it on a card for free.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">How do I keep the bouquet fresh?</button>
+                    </h3>
+                    <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faq">
+                        <div class="accordion-body">Read our <a href="care.html">Flower Care Guide</a> — six simple habits that double the vase life.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ask" class="py-5 bg-blush">
+        <div class="container" style="max-width: 600px;">
+            <h2 class="text-center mb-4">Ask About Delivery</h2>
+            <div id="sent" class="alert alert-success d-none" role="alert">Thank you! We will reply within one working day. 🌷</div>
+            <form class="needs-validation bg-white p-4 rounded-4 shadow-sm" novalidate>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="dName" placeholder="Name" required minlength="2">
+                    <label for="dName">Your name</label>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="dEmail" placeholder="Email" required>
+                    <label for="dEmail">Email</label>
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select" aria-label="Delivery type" required>
+                        <option value="" selected disabled>Delivery type…</option>
+                        <option>Express</option>
+                        <option>Standard</option>
+                        <option>Studio pickup</option>
+                    </select>
+                    <div class="invalid-feedback">Choose a delivery type.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" id="dMsg" placeholder="Question" style="height: 110px" required></textarea>
+                    <label for="dMsg">Your question</label>
+                    <div class="invalid-feedback">Write your question.</div>
+                </div>
+                <button class="btn btn-primary w-100" type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-dark text-secondary text-center py-4">
+    <div class="container small">© 2026 Flower keen Studio · Chernivtsi, Kvitkova St. 12 ·
+        <a href="tel:+380501234567" class="text-secondary">+38 (050) 123-45-67</a></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.querySelectorAll('.needs-validation').forEach(f => f.addEventListener('submit', e => {
+        e.preventDefault();
+        if (f.checkValidity()) {
+            f.reset(); f.classList.remove('was-validated');
+            document.getElementById('sent').classList.remove('d-none');
+        } else {
+            f.classList.add('was-validated');
+        }
+    }));
+</script>
+</body>
+</html>

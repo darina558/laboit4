@@ -1,0 +1,20 @@
+@use 'variables' as *;
+
+@mixin respond($bp) {
+  @media (max-width: map-get($breakpoints, $bp)) {
+    @content;
+  }
+}
+
+@mixin card($pad: 1.5rem) {
+  padding: $pad;
+  background: #fff;
+  border: 1px solid $border;
+  border-radius: $radius;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  }
+}

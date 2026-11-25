@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flower keen — fresh hand-crafted bouquets with delivery in Chernivtsi.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8C%B8%3C/text%3E%3C/svg%3E">
+    <title>Flower keen &mdash; Fresh Flowers &amp; Bouquets Delivery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <span id="top"></span>
+
+    <header id="top-nav">
+        <div class="logo">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                    d="M12 7.5a4.5 4.5 0 1 1 4.5 4.5M12 7.5A4.5 4.5 0 1 0 7.5 12M12 7.5V12m4.5 0a4.5 4.5 0 1 1-4.5 4.5M16.5 12H12m-4.5 0a4.5 4.5 0 1 0 4.5 4.5M7.5 12H12m0 4.5V21" />
+            </svg>
+            <span>Flower keen</span>
+        </div>
+
+        <div class="nav-wrap" id="navWrap">
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#catalog">Catalog <span class="arrow">&#9662;</span></a>
+                        <div class="dropdown-content">
+                            <a href="#catalog">All Bouquets</a>
+                            <a href="#wedding">Wedding Bouquets</a>
+                            <a href="#romantic">Romantic Bouquets</a>
+                            <a href="#seasonal">Seasonal Bouquets</a>
+                            <a href="#minimal">Minimalist &amp; Dried</a>
+                        </div>
+                    </li>
+                    <li><a href="#blog">Flower Care</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#custom-order">Flower Quiz</a></li>
+                    <li><a href="delivery.html">Delivery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-box">
+                <form role="search">
+                    <input type="search" name="q" placeholder="Search roses, peonies..." aria-label="Search flowers">
+                    <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <button type="button" class="icon-btn" id="cartBtn" aria-label="Open cart">
+                <i class="fa-solid fa-cart-shopping"></i><span class="badge" id="cartCount" hidden>0</span>
+            </button>
+            <button type="button" class="btn-signin" id="signinBtn">
+                <i class="fa-regular fa-user"></i><span id="signinLabel">Sign In</span>
+            </button>
+            <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navWrap">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Fresh &amp; Aesthetic Blooms for Every Moment</h1>
+                <p>Hand-crafted seasonal bouquets delivered straight to your doorstep with love and care.</p>
+                <a href="#catalog" class="cta-button">Explore Catalog &rarr;</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="image/v.jpg" alt="Aesthetic pastel flower bouquet in hands" width="400" height="620">
+            </div>
+        </section>
+
+        <section id="catalog" class="cards-section">
+            <h2>Our Bouquets</h2>
+            <p class="section-subtitle">Handmade floral arrangements, made fresh daily.</p>
+            <p id="noResults" hidden>No bouquets found 🌸 Try another search.</p>
+
+            <div class="category" id="wedding">
+                <h3 class="category-title">Wedding Bouquets</h3>
+                <div class="card-grid">
+                    <article class="card">
+                        <img src="image/b01.jpg" alt="Bridal Cascade bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Bridal Cascade</h4>
+                            <p>A flowing white bridal bouquet with roses, orchids and trailing greenery.</p>
+                            <span class="price">$85.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b02.jpg" alt="White Elegance bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>White Elegance</h4>
+                            <p>Classic all-white bouquet of peonies, roses and ranunculus.</p>
+                            <span class="price">$70.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b03.jpg" alt="Blush Bride bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Blush Bride</h4>
+                            <p>Soft blush garden roses with dusty-pink peonies and eucalyptus.</p>
+                            <span class="price">$75.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b04.jpg" alt="Garden Vows bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Garden Vows</h4>
+                            <p>Loose romantic mix of seasonal garden flowers in cream tones.</p>
+                            <span class="price">$65.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b05.jpg" alt="Bridesmaid Posy bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Bridesmaid Posy</h4>
+                            <p>A small round posy for bridesmaids, matched to the bride's palette.</p>
+                            <span class="price">$35.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="category" id="romantic">
+                <h3 class="category-title">Romantic Bouquets</h3>
+                <div class="card-grid">
+                    <article class="card">
+                        <img src="image/x.jpg" alt="Blush Symphony bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Blush Symphony</h4>
+                            <p>A wonderful white rose "Amanda".</p>
+                            <span class="price">$45.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b06.jpg" alt="Red Passion bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Red Passion</h4>
+                            <p>Deep red roses wrapped in dark paper with a silk ribbon.</p>
+                            <span class="price">$55.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b07.jpg" alt="Pink Peony Dream bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Pink Peony Dream</h4>
+                            <p>Lush pink peonies with soft green filler.</p>
+                            <span class="price">$60.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b08.jpg" alt="Love Letter bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Love Letter</h4>
+                            <p>Pink and cream roses with a handwritten card included.</p>
+                            <span class="price">$50.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b09.jpg" alt="Rose & Eucalyptus bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Rose &amp; Eucalyptus</h4>
+                            <p>Garden roses combined with fragrant eucalyptus.</p>
+                            <span class="price">$48.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="category" id="seasonal">
+                <h3 class="category-title">Seasonal Bouquets</h3>
+                <div class="card-grid">
+                    <article class="card">
+                        <img src="image/z.jpg" alt="Morning Dew bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Morning Dew</h4>
+                            <p>Vibrant combination of white hydrangeas, lisianthus, and fresh greenery for bright days.</p>
+                            <span class="price">$22.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/baner.jpg" alt="Lavender Whisper bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Lavender Whisper</h4>
+                            <p>A calming floral arrangement featuring purple hydrangeas, lavender sprigs, and carnations.</p>
+                            <span class="price">$40.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b10.jpg" alt="Spring Tulips bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Spring Tulips</h4>
+                            <p>Fresh Dutch tulips in pastel colors, wrapped by hand.</p>
+                            <span class="price">$30.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b11.jpg" alt="Autumn Terracotta bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Autumn Terracotta</h4>
+                            <p>Burnt orange, terracotta and burgundy blooms for cozy evenings.</p>
+                            <span class="price">$52.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b12.jpg" alt="Winter Frost bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Winter Frost</h4>
+                            <p>White and silver-green bouquet with pine sprigs and cotton.</p>
+                            <span class="price">$46.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="category" id="minimal">
+                <h3 class="category-title">Minimalist &amp; Dried Bouquets</h3>
+                <div class="card-grid">
+                    <article class="card">
+                        <img src="image/b13.jpg" alt="Soft Monochrome bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Soft Monochrome</h4>
+                            <p>One color, one idea: a calm bouquet in a single shade.</p>
+                            <span class="price">$38.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b14.jpg" alt="Dried Pampas bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Dried Pampas</h4>
+                            <p>Pampas grass and dried florals that stay beautiful for months.</p>
+                            <span class="price">$42.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b15.jpg" alt="Single Stem bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Single Stem</h4>
+                            <p>One perfect rose or peony, wrapped simply.</p>
+                            <span class="price">$12.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b16.jpg" alt="Wildflower Jar bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Wildflower Jar</h4>
+                            <p>Small wildflower mix arranged in a glass jar.</p>
+                            <span class="price">$28.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image/b17.jpg" alt="Green Calm bouquet" width="320" height="350" loading="lazy">
+                        <div class="card-body">
+                            <h4>Green Calm</h4>
+                            <p>Eucalyptus and greenery for a fresh, modern look.</p>
+                            <span class="price">$32.00</span>
+                            <a href="#contact" class="order-link">Order now &raquo;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="news-section">
+            <h2>Florist's Journal &amp; Tips</h2>
+
+            <div class="news-list">
+                <article class="news-item">
+                    <header class="subheader">
+                        <h3>5 Simple Secrets to Make Cut Flowers Last Twice as Long</h3>
+                        <time datetime="2026-09-18">September 18, 2026</time> &bull; <span>Author: Head Florist</span>
+                    </header>
+
+                    <div class="image-example">
+                        <img src="image/s.jpg" alt="Florist trimming flower stems with pruners" width="400" height="360">
+                        <p>Florist trimming flower stems with pruners</p>
+                    </div>
+
+                    <p>Keeping flowers fresh at home is an art! Always cut stems at a 45-degree angle under cool
+                        water, clean your vase thoroughly with warm soapy water, and ensure leaves do not touch the
+                        water to prevent bacteria growth...</p>
+                    <a href="care.html">Read full guide</a>
+                </article>
+
+                <article class="news-item">
+                    <header class="subheader">
+                        <h3>Choosing the Meaningful Flower Palette for Autumn</h3>
+                        <time datetime="2026-09-12">September 12, 2026</time> &bull; <span>Author: Flower keen
+                            Studio</span>
+                    </header>
+                    <p>As the weather cools, rich terracotta, burnt orange, and deep burgundies bring coziness and
+                        emotional warmth. Discover which seasonal blooms suit your romantic date or festive
+                        anniversary dinner...</p>
+                    <a href="care.html">Read full guide</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews-section">
+            <h2>What Our Customers Say</h2>
+            <p class="section-subtitle">Real words from people who sent and received our flowers.</p>
+
+            <div class="carousel" aria-roledescription="carousel" aria-label="Customer reviews">
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                    <figure class="review">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <blockquote>“The bouquet arrived fresh and exactly like the photo. My mum cried happy tears!”</blockquote>
+                        <figcaption><strong>Olena K.</strong> · Chernivtsi</figcaption>
+                    </figure>
+                    <figure class="review">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <blockquote>“The website is so easy to use — I ordered peonies in two minutes from my phone.”</blockquote>
+                        <figcaption><strong>Maksym P.</strong> · Kyiv</figcaption>
+                    </figure>
+                    <figure class="review">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <blockquote>“Bridal Cascade was perfect for our wedding. Thank you for the care and attention.”</blockquote>
+                        <figcaption><strong>Sofia B.</strong> · Lviv</figcaption>
+                    </figure>
+                    <figure class="review">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <blockquote>“Dried Pampas still looks amazing after four months. Great quality, nice packaging.”</blockquote>
+                        <figcaption><strong>Andrii T.</strong> · Ivano-Frankivsk</figcaption>
+                    </figure>
+                    <figure class="review">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <blockquote>“Fast delivery and a lovely handwritten card. I will definitely order again!”</blockquote>
+                        <figcaption><strong>Iryna M.</strong> · Chernivtsi</figcaption>
+                    </figure>
+                    </div>
+                </div>
+                <button type="button" class="carousel-btn prev" aria-label="Previous review">&#10094;</button>
+                <button type="button" class="carousel-btn next" aria-label="Next review">&#10095;</button>
+                <div class="carousel-dots"></div>
+            </div>
+        </section>
+
+        <section id="custom-order" class="survey-section">
+            <h2>Floral Preference Questionnaire</h2>
+            <p class="section-subtitle">Tell us your bouquet preferences, and our florist will personalize a design for you.</p>
+
+            <form id="surveyForm" class="form-container">
+                <div class="form-group">
+                    <label for="survey-user">Your Nickname / Login:</label>
+                    <input type="text" id="survey-user" name="username" placeholder="e.g. flower_lover" required minlength="3" pattern="[A-Za-z0-9_]{3,20}" title="3–20 characters: letters, digits, underscore">
+                </div>
+
+                <div class="form-group">
+                    <label for="survey-email">Your Email Address:</label>
+                    <input type="email" id="survey-email" name="user_email" placeholder="client@domain.com" required pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}">
+                </div>
+
+                <div class="form-group">
+                    <label for="survey-occasion">Occasion for the flowers:</label>
+                    <select id="survey-occasion" name="occasion">
+                        <option value="birthday" selected>Birthday Celebration</option>
+                        <option value="anniversary">Romantic Anniversary</option>
+                        <option value="wedding">Wedding / Bridal</option>
+                        <option value="gratitude">Thank You / Appreciation</option>
+                        <option value="just_because">Just Because / Home Decor</option>
+                    </select>
+                </div>
+
+                <fieldset class="form-group">
+                    <legend>Preferred Delivery Method:</legend>
+                    <label>
+                        <input type="radio" name="delivery_type" value="courier" checked>
+                        Courier direct to doorstep
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery_type" value="pickup">
+                        Self-pickup from Flower keen studio
+                    </label>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Desired Bouquet Size:</legend>
+                    <label>
+                        <input type="radio" name="size" value="mini">
+                        Mini Petite ($25 - $35)
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="standard" checked>
+                        Standard Chic ($40 - $60)
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="deluxe">
+                        Grand Deluxe ($70+)
+                    </label>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Which flowers do you adore? (Select multiple):</legend>
+                    <label>
+                        <input type="checkbox" name="flower_choice" value="peonies" checked>
+                        Peonies
+                    </label>
+                    <label>
+                        <input type="checkbox" name="flower_choice" value="roses" checked>
+                        Garden Roses
+                    </label>
+                    <label>
+                        <input type="checkbox" name="flower_choice" value="hydrangeas">
+                        Hydrangeas
+                    </label>
+                    <label>
+                        <input type="checkbox" name="flower_choice" value="tulips">
+                        Dutch Tulips
+                    </label>
+                    <label>
+                        <input type="checkbox" name="flower_choice" value="eucalyptus">
+                        Eucalyptus &amp; Dried Florals
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="survey-wishes">Your wishes for the bouquet:</label>
+                    <textarea id="survey-wishes" name="wishes" rows="4"
+                        placeholder="Colors, style, a card message..."></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit">Submit Preferences</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p class="section-subtitle">Have questions about flower availability? Drop us a line.</p>
+
+            <form id="contactForm" class="form-container">
+                <div class="form-group">
+                    <label for="contact-name">Customer Name:</label>
+                    <input type="text" id="contact-name" name="name" placeholder="Anna Miller" required pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ' \-]{2,}" title="Letters only, at least 2 characters">
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email:</label>
+                    <input type="email" id="contact-email" name="email" placeholder="anna@example.com" required pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}">
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message:</label>
+                    <textarea id="contact-message" name="message" rows="4" placeholder="Your question..."
+                        required></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit">Send Message</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <div class="modal" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle" aria-hidden="true">
+        <div class="modal-box">
+            <button type="button" class="modal-close" data-close aria-label="Close">&times;</button>
+            <h3 id="authTitle">Customer Account</h3>
+            <div id="authNotice" class="alert" role="alert"></div>
+
+            <div id="guestView">
+                <div class="tabs" role="tablist">
+                    <button type="button" class="tab active" data-tab="login">Sign In</button>
+                    <button type="button" class="tab" data-tab="register">Create Account</button>
+                </div>
+
+                <form id="loginForm" class="auth-panel active" data-panel="login">
+                    <div class="form-group">
+                        <label for="login-email">Email address:</label>
+                        <input type="email" id="login-email" name="login_email" placeholder="you@domain.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-pass">Password:</label>
+                        <input type="password" id="login-pass" name="login_pass" minlength="8" placeholder="Enter password" autocomplete="current-password" required>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit">Sign In</button>
+                        <button type="reset">Clear</button>
+                    </div>
+                </form>
+
+                <form id="registerForm" class="auth-panel" data-panel="register">
+                    <div class="form-group">
+                        <label for="reg-name">Your name:</label>
+                        <input type="text" id="reg-name" name="reg_name" placeholder="Anna Miller" autocomplete="name" required
+                            pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ' \-]{2,}" title="Letters only, at least 2 characters">
+                        <small>Letters only, at least 2 characters.</small>
+                        <span class="msg">Use letters only (min. 2 characters).</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email address:</label>
+                        <input type="email" id="reg-email" name="reg_email" placeholder="you@domain.com" autocomplete="email" required
+                            pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}" title="Example: you@domain.com">
+                        <span class="msg">Enter a valid email, e.g. you@domain.com</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-pass">Password:</label>
+                        <input type="password" id="reg-pass" name="reg_pass" placeholder="Create password" autocomplete="new-password" required
+                            pattern="(?=.*[A-Za-z])(?=.*\d).{8,}" title="At least 8 characters, with a letter and a number">
+                        <small>Minimum 8 characters, letters and numbers.</small>
+                        <span class="msg">At least 8 characters, with a letter and a number.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-pass-repeat">Confirm password:</label>
+                        <input type="password" id="reg-pass-repeat" name="reg_pass_repeat" placeholder="Repeat your password" autocomplete="new-password" required>
+                        <span class="msg">Passwords must match.</span>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit">Create Account</button>
+                        <button type="reset">Clear</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="profileView" hidden>
+                <p class="profile-email">Hello, <strong id="pName"></strong><br><span id="pEmail"></span></p>
+                <h4 class="orders-title">My orders</h4>
+                <div id="ordersList"></div>
+                <div class="form-buttons" style="margin-top:1.5rem">
+                    <button type="button" class="btn-outline" id="logoutBtn">Log out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal drawer" id="cartModal" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+        <div class="modal-box">
+            <button type="button" class="modal-close" data-close aria-label="Close">&times;</button>
+            <h3 id="cartTitle">Your Cart</h3>
+            <div id="cartItems"></div>
+            <form id="checkoutForm" hidden>
+                <div class="cart-total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+                <div class="form-group">
+                    <label for="cart-address">Delivery address:</label>
+                    <input type="text" id="cart-address" placeholder="Street, building, city" minlength="6" autocomplete="street-address" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">Place Order</button>
+                    <button type="button" class="btn-outline" id="clearCart">Clear cart</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <a href="#top" id="back-to-top" aria-label="Back to top"></a>
+
+    <footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h3 class="footer-logo">🌸 Flower keen Studio</h3>
+      <p>Aesthetic floral shop. Букети, які говорять замість слів.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Контакти</h4>
+      <p>📍 м. Чернівці, вул. Квіткова, 12</p>
+      <p>📞 <a href="tel:+380501234567">+38 (050) 123-45-67</a></p>
+      <p>✉️ <a href="mailto:hello@flowerkeen.com">hello@flowerkeen.com</a></p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Графік роботи</h4>
+      <p>Пн – Пт: 9:00 – 20:00</p>
+      <p>Сб – Нд: 10:00 – 18:00</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Сторінки</h4>
+      <div class="socials">
+        <a href="delivery.html">Delivery (Bootstrap)</a>
+        <a href="care.html">Care guide (Sass)</a>
+        <a href="invitation.html">Event invitation</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Ми в соцмережах</h4>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Flower keen Studio. All rights reserved.
+  </div>
+</footer>
+
+</body>
+
+</html>
